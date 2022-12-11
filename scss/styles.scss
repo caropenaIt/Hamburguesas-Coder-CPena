@@ -8,8 +8,8 @@ h1{
     line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
     font-size: 300;
-    margin: 10px;
-    }
+    margin: 10px;}
+    
     body{
         background-color: gold;
         background-image: url(https://images.emojiterra.com/google/noto-emoji/v2.034/128px/1f354.png);
@@ -19,15 +19,15 @@ h1{
         line-height: 1.5;
         font-family: 'Montserrat', sans-serif;
         font-size: 15px;
-        text-align: left;
-    }
-    
+        text-align: left;}
+
     .p:not(.p-1){
     background-color: tomato;
     border: solid 2px yellow;
     margin-top: 10px;
     margin-bottom: 10px;
     color: aliceblue;
+    text-align: center;
     }
     h2::after{
         content: '';
@@ -35,6 +35,9 @@ h1{
         height: 4px;
         background-color: $color-cheddar;
         display: block;
+    }
+    h3::after{
+        @extend h2,::after;
     }
     table{
         $table-color: rgb(255, 255, 0);
@@ -62,13 +65,20 @@ h1{
     }
     li:nth-child(even){
         list-style-type: '🍟';}
-    .list-group-item{ 
-        padding: 2px;
-        background: linear-gradient(yellow,rgba(255, 196, 0, 0.87));
+        .list-group{
+            @for $count from 1 through 11 {
+                li:nth-child(#{$count}) {
+                    background-color: lighten($color-cheddar, $count * 3%)
+            }
+        }
+        opacity: 0.9;
     }
-    .list-group-item:nth-child(odd){
-    background: linear-gradient(tomato, lightgreen);
-    }
+   .breadcrumb{
+    background-color: $color-cheddar;
+    border-radius: 10px;
+    border: orangered solid 1px;
+    opacity: 0.8;}
+   
     .links{
        background-color: $color-cheddar;
        font-family: 'Montserrat', sans-serif;
@@ -81,32 +91,66 @@ h1{
     .link1{
         background-color: lightyellow;
         &:hover{
-            background-color: rgb(173, 169, 169);
+            background-color: darken($color: rgb(173, 169, 169), $amount: 10%);
         }
     }
-    
+ 
     .footer{
         background-color: rgba(250, 156, 48,0.7);
         margin-top: 10px;
         border: solid orange 2px;
+        .msj{
+            text-align: center;
+            background-color: gold;
+            border-radius: 15px;
+            color: crimson;
+        }
     }
+   
+    .redes{
+        $redes: (instagram: rgba(231, 77, 103,0.5),twitter: rgba(157, 217, 236,0.5),facebook:rgba(78, 78, 240,0.5));
     
-    
+            @each $clave, $valor in $redes {
+                .redes-#{$clave} {
+                    background-color: $valor;
+                }
+            }}
+    @mixin flex ($justify, $align, $direction, $wrap, $gap, $top){
+        display: flex;
+        justify-content: $justify;
+        align-items: $align;
+        flex-direction: $direction;
+        flex-wrap: $wrap;
+        gap: $gap;
+        margin-top: $top;
+    }
+        .redes{
+            @include flex(space-around, center, row, nowrap , 10px, 5px)
+        }
+           
+            .redes2{
+                $redes: (whatsapp: rgba(61, 240, 85, 0.5),gmail: rgba(241, 92, 92, 0.5),linkedin:rgba(32, 32, 243, 0.5));
+            
+                    @each $clave, $valor in $redes {
+                        .redes2-#{$clave} {
+                            background-color: $valor;
+                        }
+                    }}
     .images{
         border: $border-video-image;
         width:100%;
-    transition: transform(0.3s);
+    
     &:hover{
-        transform: scale(1.1);
+        border: solid 5px tomato;
     }
 }
      
     .video{
         border: $border-video-image;
         width: 100%;
-        transition: transform(0.3s);
+
         &:hover{
-            transform: scale(1.1);
+            border:  solid 5px tomato;
         }
     }
     
@@ -152,7 +196,10 @@ h1{
         gap: 10px;
         .QS{
             border: 3px solid crimson;
-            width: 70%;   
+            width: 70%; 
+            &:hover{
+                border:  solid 5px steelblue;
+            }
         }
     }
     .alternar{
@@ -214,8 +261,9 @@ h1{
        width: 100%;
         padding: 10px;
         outline: none;
-        border: rgba(34, 22, 22, 0.37) solid 5px;
-        background-color: tomato;
+        border: rgba(177, 130, 3, 0.5) solid 5px;
+        background-color: $color-cheddar;
+        opacity: 0.9;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -244,10 +292,17 @@ h1{
         border-color: black;
       }
     .button{
-        margin: 10px;
-        border: $classic-border;
-        background: linear-gradient(orange,red);}
-
+        @extend .btn;
+        border: solid crimson 3px;
+        
+    }
+@mixin button($text-align: center, $margin: 10px) {
+ text-align: $text-align;
+ margin: $margin;
+}
+.button{
+    @include button(center, 10px)
+}
     .carousel-item {
         text-align: center;
     }
@@ -274,7 +329,8 @@ h1{
         }
      }  
      @media (max-width: 480px){
-        h1{background-color: rgba(255, 238, 0, 0.938);}
+        h1{background-color: rgba(255, 238, 0, 0.938);
+        font-size: 1.5rem;}
         body{
             line-height: 1.5;
             font-family: 'Montserrat', sans-serif;

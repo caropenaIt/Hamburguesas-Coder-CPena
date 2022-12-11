@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestro-menu</title>
+    <meta name="keywords" content="hamburguesas, menú, guarnición, precio">
+    <meta name="description" content="En esta sección encontrarás el menú con todas nuestras hamburguesas, junto con guarniciones y bebidas a un precio único.">
+    <title>Nuestro menu</title>
     <link rel="shorcut icon" href="imgs/Burguer favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
@@ -16,44 +18,50 @@
 </head>
 <body>
     <header class="gridH" class="header-area">
-    <h1> <img src="imgs/Burguer favicon.png" alt="Logo" class="logo">Nuestro menu</h1>
+    <h1><img src="imgs/Burguer favicon.png" alt="Logo" class="logo">Nuestro menú</h1>
     <nav class="links">
     <a href="../index.html" class="menuLink">Home</a>
-    <a href="Quienes-somos.html" class="menuLink">Quienes somos</a>
-    <a href="Nuestro-menu.html" class="menuLink">Nuestro menu</a>
+    <a href="Quienes-somos.html" class="menuLink">Quiénes somos</a>
+    <a href="Nuestro-menu.html" class="menuLink">Nuestro menú</a>
     <a href="Sucursales.html" class="menuLink">Sucursales</a>
     <a href="Contacto.html" class="menuLink">Contacto</a>
     </nav>
 </header>
 <section>
-    <a href="#footer" class="link1" >Pie de pagina</a>
-    <h2>¿Que contiene nuestro menu?:</h2>
-    <div id="top">Contamos con un menu variado con distintos tipos de hamburguesas y guarniciones para acompañar. ¿Lo mejor? Estan a un precio unico.</div>
+   <p><a href="#footer" class="link1" >Pie de página</a></p>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <ul class="breadcrumb-item"><a href="../index.html">Home</a></ul>
+          <ul class="breadcrumb-item active" aria-current="page">Nuestro menú</ul>
+        </ol>
+      </nav>
+    <h2>¿Que contiene nuestro menú?:</h2>
+    <div id="top">Contamos con un menú variado con distintos tipos de hamburguesas y guarniciones para acompañar. ¿Lo mejor? Están a un precio único.</div>
     <section>
         <ul>
            <li>Hamburguesas: pueden ser de carne, pollo o veggies.</li>
            <li>Guarniciones: con papas y/o batatas fritas; o pure de papas y/o batatas y/o zapallo.</li>
-           <li>Bebidas: tenemos soda, Coca-cola, agua y cerveza (tambien contamos con variante sin alcohol).</li>
-           <li>Ingredientes: unicos e irresistibles, y con variantes veggies.</li>
-           <li>Precios: los mas comodos a los bolsillos de nuestros clientes.</li>
+           <li>Bebidas: tenemos soda, Coca-cola, agua y cerveza (también contamos con variante sin alcohol).</li>
+           <li>Ingredientes: únicos e irresistibles, y con variantes veggies.</li>
+           <li>Precios: los mas cómodos a los bolsillos de nuestros clientes.</li>
         </ul>
        </section>
 </section>
 <main>
-    <p><h2>Menu</h2></p>
+    <p><h3>Menú</h3></p>
     <div class="table-responsive-sm">
     <table class="table table-bordered border-dark">
         <tr>
 
         <th class="table-bordered border-dark" scope="col">hamburguesas</th>
         <th class="table-bordered border-dark" scope="col">ingredientes</th>
-        <th class="table-bordered border-dark" scope="col">guarnicion</th>
         <th class="table-bordered border-dark" scope="col">bebida</th>
+        <th class="table-bordered border-dark" scope="col">guarnición</th>
         <th class="table-bordered border-dark" scope="col">precio</th>
 
     </tr>
 
-    <td  class="table-bordered border-dark" scope="row">Comun</td>
+    <td  class="table-bordered border-dark" scope="row">Común</td>
     <td  class="table-bordered border-dark"scope="row">Carne/pollo/veggie, lechuga, tomate</td>
     <td  class="table-bordered border-dark"scope="row">Papas/batatas fritas o pure papas/batatas/zapallo</td>
     <td  class="table-bordered border-dark"scope="row">Coca-cola, soda, agua o cerveza con o sin alcohol  </td>
@@ -96,13 +104,14 @@
 </div>
 </main>
 <section>
- <p>¿Se te ocurrio otra hamburguesa con otros ingredientes y diferentes guarniciones? Haz click al boton de al lado 👉<a class="button" href="Contacto.html"target="_blank">Ir a comentarios</a></p>
+    <p>¿Se te ocurrió otra hamburguesa con otros ingredientes y diferentes guarniciones? Haz click al botón de al lado.  👉 <a href="Contacto.html" target="_blank" class="button">Ir a comentarios</a></p>
 </section>
 <footer class="footer">
-    <p><img src="./imgs/ig logo.jpg" alt="ig" class="logo-t"> Instagram: las_hamburguesas+ricas_ok</p>
-   <p><img src="./imgs/twitter logo.png" alt="twitter" class="logo-t"> Twitter: las_hamburguesas+ricas_ok</p>
-   <p><img src="./imgs/facebook logo.png" alt="facebook" class="logo-t" > Facebook: las_hamburguesas+ricas_ok</p>
-   <p id="footer">Sitio web ficticio creado desde cero por Carolina Pena</p>
+    <div class="redes"> <p class="redes-instagram" ><img src="./imgs/ig logo.jpg" alt="ig" class="logo-t" > Instagram: las_hamburguesas+ricas_ok</p></li>
+     <p class="redes-twitter"><img src="./imgs/twitter logo.png" alt="twitter" class="logo-t" > Twitter: las_hamburguesas+ricas_ok</p></li>
+   <p class="redes-facebook" ><img src="./imgs/facebook logo.png" alt="facebook" class="logo-t" > Facebook: las_hamburguesas+ricas_ok</p></li>
+    </div>
+   <p class="msj" id="footer">Sitio web ficticio creado desde cero por Carolina Pena</p>
    <a href="#top" class="link1">top</a>
    </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
