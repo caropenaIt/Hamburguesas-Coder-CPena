@@ -67,7 +67,7 @@ li:nth-child(even) {
 }
 
 .list-group {
-  opacity: 0.9;
+  width: 80%;
 }
 .list-group li:nth-child(1) {
   background-color: #f8ad23;
@@ -108,6 +108,7 @@ li:nth-child(even) {
   border-radius: 10px;
   border: orangered solid 1px;
   opacity: 0.8;
+  width: 30%;
 }
 
 .links {
@@ -158,6 +159,9 @@ li:nth-child(even) {
   margin-top: 5px;
 }
 
+.redes2 {
+  width: 45%;
+}
 .redes2 .redes2-whatsapp {
   background-color: rgba(61, 240, 85, 0.5);
 }
@@ -168,12 +172,17 @@ li:nth-child(even) {
   background-color: rgba(32, 32, 243, 0.5);
 }
 
+.contact {
+  background-color: rgb(238, 238, 45);
+  border: solid black 1px;
+}
+
 .images {
   border: solid 3px white;
   width: 100%;
 }
 .images:hover {
-  border: solid 5px tomato;
+  border: solid 3px tomato;
 }
 
 .video {
@@ -181,7 +190,7 @@ li:nth-child(even) {
   width: 100%;
 }
 .video:hover {
-  border: solid 5px tomato;
+  border: solid 3px tomato;
 }
 
 .logo-t {
@@ -228,7 +237,7 @@ li:nth-child(even) {
   width: 70%;
 }
 .flex-section .QS:hover {
-  border: solid 5px steelblue;
+  border: solid 3px steelblue;
 }
 
 .alternar {
@@ -333,6 +342,8 @@ li:nth-child(even) {
 
 .carousel-item {
   text-align: center;
+  background-color: rgb(247, 167, 20);
+  border: orangered solid 1px;
 }
 
 @media (max-width: 1030px) {
@@ -362,11 +373,20 @@ li:nth-child(even) {
   .flex-section {
     flex-wrap: wrap;
   }
+  .list-group {
+    width: 60%;
+  }
+  .footer {
+    width: 90%;
+  }
+  .redes {
+    width: 80%;
+  }
 }
 @media (max-width: 480px) {
   h1 {
     background-color: rgba(255, 238, 0, 0.938);
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   body {
     line-height: 1.5;

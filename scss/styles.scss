@@ -71,13 +71,14 @@ h1{
                     background-color: lighten($color-cheddar, $count * 3%)
             }
         }
-        opacity: 0.9;
+        width: 80%;
     }
    .breadcrumb{
     background-color: $color-cheddar;
     border-radius: 10px;
     border: orangered solid 1px;
-    opacity: 0.8;}
+    opacity: 0.8;
+width: 30%;}
    
     .links{
        background-color: $color-cheddar;
@@ -135,13 +136,18 @@ h1{
                         .redes2-#{$clave} {
                             background-color: $valor;
                         }
-                    }}
+                    }
+                width: 45%;}
+    .contact{
+             background-color: rgb(238, 238, 45);
+             border: $classic-border;
+            }
     .images{
         border: $border-video-image;
         width:100%;
     
     &:hover{
-        border: solid 5px tomato;
+        border: solid 3px tomato;
     }
 }
      
@@ -150,7 +156,7 @@ h1{
         width: 100%;
 
         &:hover{
-            border:  solid 5px tomato;
+            border:  solid 3px tomato;
         }
     }
     
@@ -198,7 +204,7 @@ h1{
             border: 3px solid crimson;
             width: 70%; 
             &:hover{
-                border:  solid 5px steelblue;
+                border:  solid 3px steelblue;
             }
         }
     }
@@ -305,6 +311,8 @@ h1{
 }
     .carousel-item {
         text-align: center;
+        background-color: $color-cheddar;
+        border: orangered solid 1px;
     }
     @media (max-width: 1030px){
         h1{ background-color: rgba(255, 238, 0, 0.938);}
@@ -327,10 +335,19 @@ h1{
         .flex-section{
             flex-wrap: wrap;
         }
+        .list-group{
+            width: 60%;
+        }
+        .footer{
+            width: 90%;
+        }
+        .redes{
+            width: 80%;
+        }
      }  
      @media (max-width: 480px){
         h1{background-color: rgba(255, 238, 0, 0.938);
-        font-size: 1.5rem;}
+        font-size: 1rem;}
         body{
             line-height: 1.5;
             font-family: 'Montserrat', sans-serif;
